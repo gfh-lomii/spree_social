@@ -1,18 +1,38 @@
-<div id="social-signin-links" class="border-top mt-3 pt-3">
+<div class="row">
+  <div class="col-12 px-0">
+    <% if controller_name === 'user_registrations' %>
+      <div class="profile-login white">
+        Registrarme
+      </div>
+      <%= link_to login_path, class: 'profile-login' do %>
+        Iniciar sesión
+      <% end %>
+    <% end %>
+    <% if controller_name === 'user_sessions' %>
+      <%= link_to registration_path, class: 'profile-login' do %>
+        Registrarme
+      <% end %>
+      <div class="profile-login white">
+        Iniciar sesión
+      </div>
+    <% end %>
+  </div>
+</div>
+<div id="social-signin-links " class="mt-3 <%= 'col-lg-11 mx-auto' if controller_name === 'checkout' %>">
   <% if (!spree_current_user || !spree_current_user.user_authentications) && Spree::AuthenticationMethod.active_authentication_methods? %>
-    <h4 class="text-center h5">
+    <h4 class="text-center <%= controller_name === 'checkout' ? 'spree-header spree-mb-large' : 'h4 mb-3'%>">
       <%= Spree.t(:sign_in_through_one_of_these_services) %>
     </h4>
   <% end %>
-
-  <div class="text-center">
-    <% Spree::AuthenticationMethod.available_for(@spree_user).each do |method| %>
+  <% user = @user || @spree_user %>
+  <div class="text-center social-btn">
+    <% Spree::AuthenticationMethod.available_for(user).each do |method| %>
       <%= link_to(
         content_tag(:i,
           '',
           class: "d-inline-block icon-spree-#{method.provider.to_url}-circled"
         ),
-        path_for_omniauth(@spree_user, method.provider),
+        path_for_omniauth(user, method.provider),
         id: method.provider.to_url,
         title: Spree.t(:sign_in_with, provider: method.provider),
         class: 'd-inline-block'

@@ -22,43 +22,43 @@
 }
 
 
- [class^="icon-spree-"]:before, [class*=" icon-spree-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
+[class^="icon-spree-"]:before, [class*=" icon-spree-"]:before {
+    font-family: "Font Awesome 5 Brands";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
 
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
 
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
 
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
 
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
 
-  /* you can be more comfortable with increased icons size */
-  font-size: 280%;
+    /* you can be more comfortable with increased icons size */
+    font-size: 280%;
 
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 .icon-spree-github:before { content: '\e800'; } /* '' */
 .icon-spree-github-circled:before { content: '\e801'; } /* '' */
 .icon-spree-twitter:before { content: '\e802'; } /* '' */
 .icon-spree-twitter-circled:before { content: '\e803'; } /* '' */
-.icon-spree-facebook:before { content: '\e804'; } /* '' */
-.icon-spree-facebook-circled:before { content: '\e805'; } /* '' */
-.icon-spree-google-oauth2:before { content: '\e806'; } /* '' */
-.icon-spree-google-oauth2-circled:before { content: '\e807'; } /* '' */
+.icon-spree-facebook:before { content: '\f39e'; } /* '' */
+.icon-spree-facebook-circled:before { content: '\f39e'; } /* '' */
+.icon-spree-google-oauth2:before { content: '\f1a0'; } /* '' */
+.icon-spree-google-oauth2-circled:before { content: '\f1a0'; } /* '' */
 .icon-spree-amazon:before { content: '\e808'; } /* '' */
 .icon-spree-amazon-circled:before { content: '\e808'; } /* '' */
