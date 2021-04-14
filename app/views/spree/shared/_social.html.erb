@@ -24,7 +24,7 @@
       <%= Spree.t(:sign_in_through_one_of_these_services) %>
     </h4>
   <% end %>
-  <% user = @user || @spree_user %>
+  <% user = Spree::User.new %>
   <div class="text-center social-btn">
     <% Spree::AuthenticationMethod.available_for(user).each do |method| %>
       <%= link_to(
