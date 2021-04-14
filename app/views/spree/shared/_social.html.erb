@@ -35,6 +35,7 @@
         path_for_omniauth(user, method.provider),
         id: method.provider.to_url,
         title: Spree.t(:sign_in_with, provider: method.provider),
+        data: {turbolinks: false},
         class: 'd-inline-block'
       ) if method.active %>
     <% end %>
