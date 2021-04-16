@@ -31,7 +31,7 @@
         content_tag(:i,
           '',
           class: "d-inline-block icon-spree-#{method.provider.to_url}-circled"
-        ),
+        ) + method.provider.gsub('_oauth2', ''),
         path_for_omniauth(user, method.provider),
         id: method.provider.to_url,
         title: Spree.t(:sign_in_with, provider: method.provider),
