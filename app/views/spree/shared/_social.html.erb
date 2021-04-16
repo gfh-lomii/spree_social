@@ -18,12 +18,10 @@
     <% end %>
   </div>
 </div>
-<div id="social-signin-links " class="mt-3 <%= 'col-lg-11 mx-auto' if controller_name === 'checkout' %>">
-  <% if (!spree_current_user || !spree_current_user.user_authentications) && Spree::AuthenticationMethod.active_authentication_methods? %>
-    <h4 class="text-center <%= controller_name === 'checkout' ? 'spree-header spree-mb-large' : 'h4 mb-3'%>">
-      <%= Spree.t(:sign_in_through_one_of_these_services) %>
-    </h4>
-  <% end %>
+<div id="social-signin-links " class="mt-3">
+  <h4 class="text-center <%= controller_name === 'checkout' ? 'spree-header spree-mb-large' : 'h4 mb-3' %>">
+    <%= Spree.t(:sign_in_through_one_of_these_services) %>
+  </h4>
   <% user = Spree::User.new %>
   <div class="text-center social-btn">
     <% Spree::AuthenticationMethod.available_for(user).each do |method| %>
