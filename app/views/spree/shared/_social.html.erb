@@ -19,9 +19,9 @@
   </div>
 </div>
 <div id="social-signin-links " class="mt-3">
-  <h4 class="text-center <%= controller_name === 'checkout' ? 'spree-header spree-mb-large' : 'h4 mb-3' %>">
+  <p class="text-center h4 <%= controller_name === 'checkout' ? 'spree-header spree-mb-large' : 'h4 mb-3' %>">
     <%= Spree.t(:sign_in_through_one_of_these_services) %>
-  </h4>
+  </p>
   <% user = Spree::User.new %>
   <div class="text-center social-btn">
     <% Spree::AuthenticationMethod.available_for(user).each do |method| %>

@@ -3,7 +3,7 @@
   <div id="existing-customer">
     <% if spree_current_user.user_authentications %>
       <% unless spree_current_user.user_authentications.empty? %>
-        <h4><%= Spree.t(:you_have_signed_in_with_these_services) %></h4>
+        <p class="h4"><%= Spree.t(:you_have_signed_in_with_these_services) %></p>
         <div class="authentications">
           <% for user_authentication in spree_current_user.user_authentications %>
             <div class="authentication row">
